@@ -69,3 +69,6 @@ project/**/metals.sbt
 
 .bsp
 .history
+
+#scala-build
+.scala-build*/
