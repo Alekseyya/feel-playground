@@ -1,5 +1,6 @@
 # feel-playground
 Feel Scala Playground REPL
+Feel version 1.18
 # Build and run
 Воспользоваться документаций по установке REPL https://ammonite.io/#Ammonite-REPL 
 Примеры скритов https://camunda.github.io/feel-scala/docs/playground/repl
