@@ -60,6 +60,7 @@ jitwatch.out
 # Used by the restarr/restarrFull commands as target directories
 /build-restarr/
 /target-restarr/
+/.scala-build
 
 # metals
 .metals
