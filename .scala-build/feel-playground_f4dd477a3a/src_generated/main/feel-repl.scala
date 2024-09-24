@@ -60,6 +60,8 @@ implicit class MySerializer[A](that: A) {
       case x: String     => x.toString
       case x: Int        => x.toString
       case x: Boolean    => x.toString
+      case x: DateTime   => x.toString
+      case x: LocalDateTime   => x.toString
       case _             => "NuN"
     }
   }
@@ -69,7 +71,7 @@ private def printResult(evalResult: EvaluationResult): Unit = {
   if (evalResult.isSuccess) {
     //println(fansi.Color.LightGreen(s"> ${evalResult.result}"))
     //Не удалять
-    //println(s"Type variable : ${evalResult.result.getClass}")
+    println(s"Type variable : ${evalResult.result.getClass}")
     //println(s"Variable : ${evalResult.result.toString()}")
     val jsonString = evalResult.result.toJsonString
     println(fansi.Color.LightGreen(s"> ${jsonString}"))
