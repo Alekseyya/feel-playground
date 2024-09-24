@@ -6,53 +6,64 @@ import upickle.default._
 
 feel(
 """
-date and time(now(), "Z")  
+{
+  dateTemp : date and time(now(), "Z"),
+  yyyy : dateTemp.year,
+  mm : dateTemp.month,
+  d : dateTemp.day,
+  date : date(yyyy, mm, d),
+  hh : dateTemp.hour,
+  m : dateTemp.minute,
+  time : time(hh, m, 0),  
+  dateTime : date and time(date, time),
+  dateTimeString : string(dateTime) + ".000Z"
+}.dateTime
  """)
 
 
-feel(
-"""
-"Мфдукф"
- """)
+// feel(
+// """
+// "Мфдукф"
+//  """)
 
-feel(
-"""for
-  fruit in [ "apple", "bananas" ], vegetable in vegetables
-return
-  { ingredients: [ fruit, vegetable ] }
-""", """{
-  "vegetables": [ "garlic", "tomato" ],
-  "Mike's age": 35
-}
-""")
+// feel(
+// """for
+//   fruit in [ "apple", "bananas" ], vegetable in vegetables
+// return
+//   { ingredients: [ fruit, vegetable ] }
+// """, """{
+//   "vegetables": [ "garlic", "tomato" ],
+//   "Mike's age": 35
+// }
+// """)
 
 
-feel(
-"""
-DateTimeNow > mergedTask.relevantEndTime 
-""",
-"""{
-     "DateTimeNow" : "2024-09-18T08:04.000Z",
-      "mergedTask": {
-          "relevantEndTime": "2024-09-18T11:55:00.000Z",
-          "estimatedEndTime": "2024-09-18T11:55:00.000Z",
-          "state": "AssignedManual",
-          "scheduledEndTime": "2024-09-18T11:55:00.000Z",
-          "relevantStartTime": "2024-09-18T11:05:00.000Z",
-          "resourceGroupIdentity": "CInBS",
-          "endLocationIdentity": "BG106",
-          "startLocationIdentity": "BG106",
-          "identity": "202409180038_01273212563",
-          "scheduledStartTime": "2024-09-18T11:05:00.000Z",
-          "cleanupDuration": "PT0S",
-          "estimatedStartTime": "2024-09-18T11:05:00.000Z",
-          "customDataRelations": [],
-          "workingShiftIdentity": "ГРПП_Ж0800-2030_2024-09-18_104092",
-          "setupDuration": "PT0S"
-      },
-      "result": true
-  } 
-""")
+// feel(
+// """
+// DateTimeNow > mergedTask.relevantEndTime 
+// """,
+// """{
+//      "DateTimeNow" : "2024-09-18T08:04.000Z",
+//       "mergedTask": {
+//           "relevantEndTime": "2024-09-18T11:55:00.000Z",
+//           "estimatedEndTime": "2024-09-18T11:55:00.000Z",
+//           "state": "AssignedManual",
+//           "scheduledEndTime": "2024-09-18T11:55:00.000Z",
+//           "relevantStartTime": "2024-09-18T11:05:00.000Z",
+//           "resourceGroupIdentity": "CInBS",
+//           "endLocationIdentity": "BG106",
+//           "startLocationIdentity": "BG106",
+//           "identity": "202409180038_01273212563",
+//           "scheduledStartTime": "2024-09-18T11:05:00.000Z",
+//           "cleanupDuration": "PT0S",
+//           "estimatedStartTime": "2024-09-18T11:05:00.000Z",
+//           "customDataRelations": [],
+//           "workingShiftIdentity": "ГРПП_Ж0800-2030_2024-09-18_104092",
+//           "setupDuration": "PT0S"
+//       },
+//       "result": true
+//   } 
+// """)
 //println(Map("DateTimeNow" -> "2024-09-18T08:04.000Z"))
 //val jsonString:String = write(result)
 //println(jsonString)
