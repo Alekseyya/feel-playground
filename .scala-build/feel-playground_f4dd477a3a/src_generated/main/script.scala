@@ -12,7 +12,7 @@ import upickle.default._
 
 feel(
 """
-"asdasd"
+"Мфдукф"
  """)
 
 feel(

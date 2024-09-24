@@ -54,6 +54,7 @@ implicit class MySerializer[A](that: A) {
       case x: String     => x.toString
       case x: Int        => x.toString
       case x: Boolean    => x.toString
+      case x: DateTime    => x.toString
       case _             => "NuN"
     }
   }

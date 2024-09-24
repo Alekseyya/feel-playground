@@ -6,7 +6,13 @@ import upickle.default._
 
 feel(
 """
-"asdasd"
+date and time(now(), "Z")  
+ """)
+
+
+feel(
+"""
+"Мфдукф"
  """)
 
 feel(
